@@ -55,7 +55,7 @@ public class employee {
     public void setStaffID(int staffID) {
         this.staffID = staffID;
     }
-
+// getters
     public String getName() {
         return name;
     }
