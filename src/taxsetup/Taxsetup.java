@@ -4,6 +4,8 @@
  */
 package taxsetup;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Primm
@@ -17,7 +19,11 @@ public class Taxsetup {
         
        
         // TODO code application logic here
-         employee e2= new employee("John","2023-03-26","");
+        System.out.println("welcome to your infoslip");
+        System.out.println("Setting up your portal...loading");
+        Scanner sc = new Scanner(System.in);
+        String option = sc.nextLine();
+       
          
     
 }
