@@ -27,7 +27,7 @@ public class datasetup {
             stmt.execute("CREATE DATABASE IF NOT EXISTS  'administrator';");
             stmt.execute("USE 'administrator';");
             String sql;
-            sql =  "CREATE TABLE IF NOT EXISTS "+ TABLE_NAME +"("
+            sql =  "CREATE TABLE IF NOT EXISTS 'employeedata';)"
                         + "name VARCHAR(25),"
                         + "surname varchar (20)"
                         + "birthdate DATE,"
