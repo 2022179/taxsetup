@@ -7,6 +7,7 @@ package taxsetup;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 /**
  *
@@ -19,7 +20,15 @@ public class datasetup {
     
     //method to set up our database
     public boolean setupDB() throws SQLException{
+        try(
        Connection conn= DriverManager.getConnection( DB_BASE_URL,USER,PASSWORD);
-    
+      Statement stmt =conn.createStatement();
+      ){
+            stmt.execute("CREATE DATABASE IF NOT EXISTS  'administrator';");
+            stmt.execute("USE 'administrator';");
+            String sql;
+            sql = "CREATE TABLE IF NOT EXISTS 'employeedata'(";
+            
+}
 }
 }
