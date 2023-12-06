@@ -9,11 +9,17 @@ package taxsetup;
  * @author User
  */
 public class Admin extends employee {
-     private AdminRole AdminRole;
+     private AdminRole adminRole;
      
-     Admin admin = new Admin("CCT","Dublin", "AdminName", "AdminSurname", AdminRole.SUPER_ADMIN);
+     Admin admin = new Admin("CCT","Dublin", "AdminName", "AdminSurname");
     public Admin(String name, String birthdate, String email, String password) {
         super(name, birthdate, email, password);
+    }
+
+    private static class AdminRole {
+
+        public AdminRole() {
+        }
     }
     
 }
