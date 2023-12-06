@@ -34,7 +34,7 @@ public class employee {
     private String email;
     private int staffID;
     private String password;
-    private final String lastnamem;
+
 
     public void setPassword(String password) {
         this.password = password;
@@ -45,7 +45,7 @@ public class employee {
    //constructors 
     public employee(String name, String birthdate, String email, String password ) {
         this.name = name;
-        this.lastnamem = lastname;
+        this.lastname = lastname;
         this.birthdate = birthdate;
         this.email = email;
         this.staffID = staffID;
