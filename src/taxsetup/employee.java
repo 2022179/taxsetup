@@ -29,6 +29,7 @@ public class employee {
     }
  
     private String name;
+    private String lastname;
     private String birthdate;
     private String email;
     private int staffID;
@@ -64,6 +65,10 @@ public class employee {
     public void setStaffID(int staffID) {
         this.staffID = staffID;
     }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
 // getters
     public String getName() {
         return name;
@@ -83,6 +88,10 @@ public class employee {
 
     public String getPassword() {
         return password;
+    }
+
+    public String getLastname() {
+        return lastname;
     }
     
 }
