@@ -24,13 +24,20 @@ public class employee {
     private String email;
     private int staffID;
     private String password;
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    
     private static int taxID =1;// this means its final and cant be changed 
    //constructors 
-    public employee(String name, String birthdate, String email) {
+    public employee(String name, String birthdate, String email, String password ) {
         this.name = name;
         this.birthdate = birthdate;
         this.email = email;
         this.staffID = staffID;
+         this.password = password;
     }
 //setters 
     public void setName(String name) {
@@ -47,6 +54,26 @@ public class employee {
 
     public void setStaffID(int staffID) {
         this.staffID = staffID;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getBirthdate() {
+        return birthdate;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public int getStaffID() {
+        return staffID;
+    }
+
+    public String getPassword() {
+        return password;
     }
     
 }
