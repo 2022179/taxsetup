@@ -9,6 +9,15 @@ package taxsetup;
  * @author Primm
  */
 public class employee {
+    
+    /*
+    name
+    lastname
+    birthdate 
+    email
+    staffID
+    password
+    */
 
     //getter for tax ID
     public static int getTaxID() {
