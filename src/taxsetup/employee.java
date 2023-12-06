@@ -23,6 +23,7 @@ public class employee {
     private String birthdate;
     private String email;
     private int staffID;
+    private String password;
     private static int taxID =1;// this means its final and cant be changed 
    //constructors 
     public employee(String name, String birthdate, String email) {
