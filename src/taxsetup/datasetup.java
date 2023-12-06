@@ -14,12 +14,12 @@ import java.sql.Statement;
  * @author Primm
  */
 public class datasetup {
-    final String DB_BASE_URL = "jdbc:mysql://localhost";
-    final String USER = "CCT";
-    final String PASSWORD ="dublin"; 
+    final static String DB_BASE_URL = "jdbc:mysql://localhost";
+    final static String USER = "CCT";
+    final static String PASSWORD ="dublin"; 
     
     //method to set up our database
-    public boolean setupDB() throws SQLException{
+    public static boolean setupDB() throws SQLException{
         try(
        Connection conn= DriverManager.getConnection( DB_BASE_URL,USER,PASSWORD);
       Statement stmt =conn.createStatement();
@@ -27,8 +27,20 @@ public class datasetup {
             stmt.execute("CREATE DATABASE IF NOT EXISTS  'administrator';");
             stmt.execute("USE 'administrator';");
             String sql;
-            sql = "CREATE TABLE IF NOT EXISTS 'employeedata'(";
+            sql =  "CREATE TABLE IF NOT EXISTS "+ TABLE_NAME +"("
+                        + "name VARCHAR(25),"
+                        + "surname varchar (20)"
+                        + "birthdate DATE,"
+                        + "email varchar (30)"
+                        + "staffID INT(5),"
+                        + "password(6)"
+                        + ");";
+            stmt.execute(sql);
+            return true;
             
+}catch (Exception e){
+    e.printStackTrace();
+    return false;
 }
 }
 }
