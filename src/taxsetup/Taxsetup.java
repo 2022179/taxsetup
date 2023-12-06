@@ -24,13 +24,29 @@ public class Taxsetup {
        
         // TODO code application logic here
         System.out.println("welcome to your infoslip");
-        System.out.println("Setting up your portal...loading");
+        //System.out.println("Setting up your portal...loading");
         System.out.println("Please enter your name : ");
         Scanner sc = new Scanner(System.in);
-        String option = sc.nextLine();
+        String name = "";
+        boolean validInput =false;
+        while (!validInput){
+            System.out.println("Please enter your name");
+            if (sc.hasNextLine()){
+                name = sc.nextLine().trim();
+                //validate the input 
+                if (name.matches("[a-zA-Z]+")){
+                    validInput = true;
+                
+                    
+                }
+            }
+        }
+        //String name = sc.nextLine();
+        //name variable contains the input
+        System.out.println("Hello, " + name + "welcome to infoslips");//using name logic to further logic 
         
         
-    BufferedReader br = new BufferedReader(new FileReader("taxpayer.csv"));// adding a file method
+    //BufferedReader br = new BufferedReader(new FileReader("taxpayer.csv"));// adding a file method
        
          }
     
