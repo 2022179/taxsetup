@@ -38,7 +38,7 @@ public class Admin extends employee {
     public void setAdmin(Admin admin) {
         this.admin = admin;
     }
-    
+    //@override
    public double calculateTax(double grossIncome, double taxIncome, Taxtype taxType){
    //admins they dont pay tax this will return 0
    return 0;
